@@ -70,13 +70,13 @@ keys = [
     Key([mod], "F5", lazy.spawn("brightnessctl set 5%-"), desc="Bajar el brillo"),
     Key([mod], "F6", lazy.spawn("brightnessctl set 5%+"), desc="Subir el brillo"),
     # Atajo para bajar el volumen (Mod + F7)
-    Key([mod], "F11", lazy.spawn("amixer -q sset Master 5%-"), desc="Bajar el volumen"),
+    Key([mod], "F11", lazy.spawn("pamixer --decrease 1"), desc="Bajar el volumen"),
     # Atajo para subir el volumen (Mod + F8)
-    Key([mod], "F12", lazy.spawn("amixer -q sset Master 5%+"), desc="Subir el volumen"),
+    Key([mod], "F12", lazy.spawn("pamixer --increase 1"), desc="Subir el volumen"),
     Key([mod], "F1", lazy.spawn("playerctl play-pause"), desc="Pausar/Reanudar reproducción"),
     Key([mod], "F10", lazy.spawn("amixer -q set Master toggle"), desc="Silenciar/Desilenciar parlantes"),
     Key([mod], "p", lazy.spawn("screen")),
-#    Key([mod], "p", lazy.spawn("rofi -show drun"), desc="Screenshots"),
+    Key([mod], "p", lazy.spawn("scrot /home/mkm/images_screanshots/"), desc="Screenshots"),
 ]
 
 # Grupos de ventanas
