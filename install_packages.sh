@@ -1,6 +1,25 @@
 #!/bin/bash
 
-pacman -S --needed --noconfirm \
+# Función para instalar yay
+install_yay() {
+  if ! command -v yay &> /dev/null; then
+    echo "yay no está instalado. Instalando yay..."
+    sudo pacman -S --needed --noconfirm base-devel git
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf yay
+  else
+    echo "yay ya está instalado."
+  fi
+}
+
+# Llamar a la función para instalar yay si es necesario
+install_yay
+
+# Instalación de paquetes desde los repositorios oficiales
+sudo pacman -S --needed --noconfirm \
   alacritty \
   alsa-utils \
   base \
@@ -12,7 +31,6 @@ pacman -S --needed --noconfirm \
   firefox \
   gedit \
   git \
-  google-chrome \
   gparted \
   gst-plugin-pipewire \
   htop \
@@ -62,4 +80,3 @@ pacman -S --needed --noconfirm \
   zsh \
   zsh-autosuggestions \
   zsh-syntax-highlighting
-
