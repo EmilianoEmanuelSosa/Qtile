@@ -15,7 +15,6 @@ pacman -S --needed --noconfirm \
   google-chrome \
   gparted \
   gst-plugin-pipewire \
-  heroic-games-launcher-bin \
   htop \
   intel-media-driver \
   intel-ucode \
@@ -52,12 +51,8 @@ pacman -S --needed --noconfirm \
   unzip \
   variety \
   vim \
-  vulkan-intel \
   w3m \
   wget \
-  wine \
-  wine-gecko \
-  wine-mono \
   wireless_tools \
   wireplumber \
   wpa_supplicant \
