@@ -19,7 +19,7 @@ install_yay() {
 install_yay
 
 # Instalación de paquetes desde los repositorios oficiales
-sudo pacman -S --needed --noconfirm \
+sudo pacman -S --noconfirm \
   alacritty \
   alsa-utils \
   base \
@@ -52,8 +52,6 @@ sudo pacman -S --needed --noconfirm \
   nitrogen \
   pavucontrol \
   picom \
-  pipewire \
-  pipewire-jack \
   pulseaudio \
   pulseaudio-alsa \
   qtile \
