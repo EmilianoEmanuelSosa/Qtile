@@ -4,7 +4,7 @@
 install_yay() {
   if ! command -v yay &> /dev/null; then
     echo "yay no está instalado. Instalando yay..."
-    sudo pacman -S --needed --noconfirm base-devel git
+    sudo pacman -S --noconfirm base-devel git
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si --noconfirm
@@ -19,7 +19,7 @@ install_yay() {
 install_yay
 
 # Instalación de paquetes desde los repositorios oficiales
-sudo pacman -S --noconfirm \
+sudo pacman -S \
   alacritty \
   alsa-utils \
   base \
